@@ -34,7 +34,7 @@ variable "vpc" { default = { name = "example", block = "10.0.0.0/16", logtype = 
 # VPC
 ######################
 module "vpc_main" {
-  source = "github.com/virsas/terraform_vpc"
+  source = "git::https://github.com/virsas/terraform_vpc.git?ref=v1.0.0"
   vpc  = var.vpc
   logflow = true
   logsbucket = module.s3_logs.arn
